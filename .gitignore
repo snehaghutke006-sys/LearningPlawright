@@ -1,0 +1,34 @@
+# Node
+node_modules/
+package-lock.json
+npm-debug.log
+yarn-error.log
+
+# Playwright
+test-results/
+playwright-report/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+
+# Logs
+logs/
+*.log
+
+# IDEs
+.idea/
+
+# Misc
+*.local
+coverage/
+
+# Editor temporary files
+*~
+*.swp
