@@ -14,3 +14,5 @@ let suite1 = [{ name: "login", status: "pass" }];
 let suite2 = suite1.map(test => ({ ...test }));
 suite2[0].status = "fail";
 console.log(suite1[0].status); // pass
+
+
