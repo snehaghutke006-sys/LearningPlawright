@@ -38,3 +38,4 @@ console.log("array splice:" + arr)
 arr.splice(2, 1 , 999,888,666)
 console.log("array splice:" + arr)
 
+
