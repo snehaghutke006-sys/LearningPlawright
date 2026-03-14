@@ -37,3 +37,4 @@ while(j<=10){
     console.log("7 x " +k+ " = " + (7*k));
     k++;
  }
+//print
