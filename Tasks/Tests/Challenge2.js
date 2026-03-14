@@ -6,38 +6,46 @@ and a verdict (all passed → ready for release, ≤2 failures → review, >2 fa
 */
 
 let testResults = ["pass", "pass", "fail", "pass", "skip", "pass", "fail", "pass"];
+
 let pass = 0;
 let fail = 0;
 let skip = 0;
-for(let i =0 ; i<testResults.lenght ; i++)
-{
-    console.log("Checking:", testResults[i]);
-    if(testResults[i] === "pass"){
+
+for (let i = 0; i < testResults.length; i++) {
+
+    if (testResults[i] === "pass") {
         pass++;
-        console.log("pass", pass)
-    }
-
-    else if(testResults[i] === "fail"){
+        
+    } 
+    else if (testResults[i] === "fail") {
         fail++;
-        console.log("fail", fail)
-    }
-
-    else if(testResults[i] === "skip"){
+       
+    } 
+    else if (testResults[i] === "skip") {
         skip++;
-        console.log("skip", skip)
+       
     }
-
 }
-    let totalTests = testResults.length;
-  let passRate = (pass / totalTests) * 100;
 
+console.log("Passed:", pass);
+ console.log("Failed:", fail);
+  console.log("Skipped:", skip);
+
+let totalTests = testResults.length;
+let passRate = (pass / totalTests) * 100;
+console.log("Total Tests:", totalTests);
+console.log("Pass Rate:", passRate.toFixed(2) + "%");
 
 let verdict;
 
 if (fail === 0) {
-  verdict = "Ready for Release";
-} else if (fail <= 2) {
-  verdict = "Review Required";
-} else {
-  verdict = "Block Release";
+    verdict = "Ready for Release";
+} 
+else if (fail <= 2) {
+    verdict = "Review Required";
+} 
+else {
+    verdict = "Block Release";
 }
+
+console.log("Verdict:", verdict);
