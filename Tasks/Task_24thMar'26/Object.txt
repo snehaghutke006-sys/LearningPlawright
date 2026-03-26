@@ -1,0 +1,107 @@
+1. What is an Object in JavaScript?
+An object is a collection of key-value pairs used to store data.
+
+Example:
+const user = {
+  name: "Sneha",
+  age: 25
+};
+
+--------------------------------------------------
+
+2. How do you access object properties?
+
+Dot notation:
+user.name
+
+Bracket notation:
+user["age"]
+
+--------------------------------------------------
+
+3. Difference between Dot and Bracket Notation
+
+Dot:
+- Easy to read
+- Fixed key
+
+Bracket:
+- Flexible
+- Can use variables
+
+Example:
+let key = "name";
+user[key];
+
+--------------------------------------------------
+
+4. How to Add and Delete Properties?
+
+Add:
+user.city = "Nagpur";
+
+Delete:
+delete user.age;
+
+--------------------------------------------------
+
+5. How to check if a property exists?
+
+Using 'in':
+"name" in user
+
+Using hasOwnProperty:
+user.hasOwnProperty("age")
+
+--------------------------------------------------
+
+6. Object.keys()
+Returns all keys:
+Object.keys(user)
+
+--------------------------------------------------
+
+7. Object.values()
+Returns all values:
+Object.values(user)
+
+--------------------------------------------------
+
+8. Object.entries()
+Returns key-value pairs:
+Object.entries(user)
+
+--------------------------------------------------
+
+9. How to loop through an object?
+
+Using for...in:
+for (let key in user) {
+  console.log(key, user[key]);
+}
+
+Using Object.entries():
+Object.entries(user).forEach(([key, value]) => {
+  console.log(key, value);
+});
+
+--------------------------------------------------
+
+All-in-One Example:
+
+const user = {
+  name: "Sneha",
+  age: 25
+};
+
+console.log(user.name);
+
+user.city = "Nagpur";
+
+console.log("age" in user);
+
+Object.entries(user).forEach(([k, v]) => {
+  console.log(k, v);
+});
+
+delete user.age;
